@@ -1,0 +1,19 @@
+///////////NOTES/////////////
+
+Challenges:
+
+- how can I get input field data and use it with the Google API.? Created seperate variables in order  concatenate into a query string which would be the search result. I could then fetch data from search result.
+
+- look into "escaping" & HTTP querystring to fill in the search term for the googlebooks api
+
+- got a Googlebooks API key from Google cloud.
+
+
+
+Future Features:
+- add auto complete feature when user begins typing into input field.
+
+- implement expand text on click. for books with larger descriptions
+
+- implement AJAX to add "load more" feature at the bottom
+

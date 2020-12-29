@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Finder</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Book Finder</h1></header>
+      <section id="content">
+        <form id="search-form" action="#" onsubmit="return false">
+          <input
+            id="searchInput"
+            name="searchInput"
+            type="text"
+            aria-label="book search input field"
+            placeholder="Type author, book, name, subject..."
+            required
+          />
+          <button id="search-btn" type="submit">Search</button>
+        </form>
+        <div class="message-waiting">Waiting to search...</div>
+      </section>
+      <section id="books-display"></section>
+    </div>
+    <footer>
+      <p>
+        Made by
+        <a href="https://github.com/IrvHenri" target="_blank"
+          >Irving Henriquez</a
+        >
+      </p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
