@@ -1,6 +1,6 @@
 # Portfolio: Book Finder 
 
-A book finder application which uses the Google Books API to retrieve and display search results.
+A book finder application which implements the Google Books API to retrieve and display search results.
 
 ## Demo
 
