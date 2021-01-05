@@ -3,11 +3,10 @@
 A book finder application which implements the Google Books API to retrieve and display search results.
 
 ## Demo
-
-
-### User Search Request
-![bookFinderGif](https://user-images.githubusercontent.com/69181038/103257369-f15ba280-495e-11eb-9391-703f9b567e96.gif)
-
+See live demo here:
+https://irvhenri.github.io/Book-Finder-App/
+### Example: Search Result
+![bookFinderScreen](https://user-images.githubusercontent.com/69181038/103682300-b3f6a680-4f56-11eb-9f39-03d35890157c.PNG)
 
 
 ## Motivation
