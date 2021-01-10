@@ -20,4 +20,3 @@ My refactored code is in the
 However, to view my suggestions with detailed comments, I recommend you have a
 look at [PR #1](https://github.com/hora/Book-Finder-App/pull/1) (which compares
 these two branches).
-
