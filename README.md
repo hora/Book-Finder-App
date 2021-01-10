@@ -1,24 +1,17 @@
-# Portfolio: Book Finder 
+# Refactoring a Student Project
 
-A book finder application which implements the Google Books API to retrieve and display search results.
+This repo is a record of my feedback on a student project.
+My student @IrvHenri built a Book Finder App using the Google Books API, and I
+offered him feedback in the form of a code refactor.
 
-## Demo
-See live demo here:
-https://irvhenri.github.io/Book-Finder-App/
-### Example: Search Result
-![bookFinderScreen](https://user-images.githubusercontent.com/69181038/103682300-b3f6a680-4f56-11eb-9f39-03d35890157c.PNG)
+## @IrvHenri's Project Page
 
+To see the most current version of this project, see [@IrvHenri's repository](https://github.com/IrvHenri/Book-Finder-App)
+which also includes screenshots and a live demo.
 
-## Motivation
+<https://github.com/IrvHenri/Book-Finder-App>
 
-I built it to strengthen my understanding of fetching API data and rendering that data within a single page app.
+## Refactoring Suggestions
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- Google Books API
+To view my suggestions (with detailed comments), have a look at PR #1.
 
-
-## License
-MIT © [Irving Henriquez](https://github.com/IrvHenri)
