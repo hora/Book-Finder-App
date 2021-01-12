@@ -1,28 +1,31 @@
-const msgWaiting = document.querySelector(".message-waiting");
-const searchForm = document.getElementById("search-form");
-const booksDisplay = document.getElementById("books-display");
+const $msgWaiting = $(".message-waiting");
+const $searchForm = $("#search-form");
+const $booksDisplay = $("#books-display");
 
 const googleBooksURL = "https://www.googleapis.com/books/v1/volumes?q=";
 const apiKey = "&key=AIzaSyCw6aeDwd2srAlaiVBFSSBvyl2O7atCTaA";
 
-searchForm.addEventListener("submit", () => {
-  msgWaiting.style.display = "none";
-  const searchInput = document.getElementById("search-input").value;
+$searchForm.on("submit", () => {
+  $msgWaiting.hide();
+  const searchInput = $("#search-input").val();
   const searchQuery = `${googleBooksURL}${searchInput}${apiKey}`;
 
   getBooks(searchQuery);
 });
 
-async function getBooks(query) {
-  const booksPromise = await fetch(query);
-  const booksData = await booksPromise.json();
-
-  displayBooks(booksData.items);
+function getBooks(query) {
+  $.ajax({
+    url: query,
+    method: "GET",
+    datatype: "json"
+  }).done((booksData) => {
+    displayBooks(booksData.items);
+  });
 }
 
 function displayBooks(books) {
   // clear any previous results
-  booksDisplay.innerHTML = "";
+  $booksDisplay.empty();
 
   books.forEach((book) => {
 
@@ -34,10 +37,9 @@ function displayBooks(books) {
     let publisher = volumeInfo.publisher || "N/A";
     let smallThumbnail = getThumbnail(volumeInfo);
 
-    let bookDiv = document.createElement("div");
+    let $bookDiv = $("<div>").addClass("book-styling");
 
-    bookDiv.classList.add("book-styling");
-    bookDiv.innerHTML = `
+    $bookDiv.html(`
     <h3>  ${title} </h3>
     <div class= "book-img">
      <img src= "${smallThumbnail}" alt= "Image book cover ">
@@ -48,9 +50,9 @@ function displayBooks(books) {
         <small> <strong>Published</strong>: ${publishdate}</small>
       </div>
       <a href = "${previewLink}" class ="book-link" target="_blank">  Google Books Preview </a>
-       `;
+       `);
 
-    booksDisplay.append(bookDiv);
+    $booksDisplay.append($bookDiv);
   });
 }
 
