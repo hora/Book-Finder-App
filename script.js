@@ -55,10 +55,10 @@ function displayBooks(books) {
 }
 
 function getThumbnail(volumeInfo) {
-    if (volumeInfo.imageLinks && volumeInfo.imageLinks.smallThumbnail) {
-      return volumeInfo.imageLinks.smallThumbnail;
-    } else {
-      // if google books doesn't have a thumbnail, use a placeholder
-      return "https://picsum.photos/130/190";
-    }
+  if (volumeInfo.imageLinks && volumeInfo.imageLinks.smallThumbnail) {
+    return volumeInfo.imageLinks.smallThumbnail;
+  } else {
+    // if google books doesn't have a thumbnail, use a placeholder
+    return "https://picsum.photos/130/190";
+  }
 }
